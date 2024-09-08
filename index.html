@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namie - Developer & UX/UI Designer</title>
+    <meta name="description" content="Full Stack Developer and UX/UI Designer based in São Paulo">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <img src="img/marca.svg" alt="Namie" width="104" height="38">
+        <nav>
+            <ul class="header-menu">
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <!-- Aqui colocamos no href # para quando for clicado, scrollar para a section da página onde o conteúdo interessado está -->
+            </ul>
+        </nav>
+    </header>
+
+    <main class="introducao"> <!-- Conteúdo principal -->
+        <img src="./img/perfil.png" alt="Namie" width="360" height="520"> <!-- Illustrator: -->
+        <div>
+            <h1>Front End<br>Developer &<br>UX/UI Designer</h1>
+            <p>Based in São Paulo</p>
+        </div>
+    </main>
+
+    <section class="experience" id="experience" aria-label="experience"> <!-- ID serve pro scroll do menu do header até o conteúdo, CLASS para o css e o ARIA-LABEL para acessibilidade -->
+        <h2 class="subtitulo">Experience</h2>
+        <div>
+            <p class="experience-text">I develop small projects using only <strong>HTML</strong>, <strong>CSS</strong> and <strong>JavaScript</strong>. Additionally, I also have knowledge of programming languages like <strong>C++</strong>.</p>
+
+            <div class="company">
+                <span class="company-year">2024</span>
+                <h3 class="company-title">IBM — International Business Machines Corporation</h3>
+                <span class="company-title">Intern</span> <!-- Mesmo estilo, por isso estão nomeados igualmente -->
+                <p class="company-text">I focus on connecting clients with innovative AI, cloud, and tech solutions. My role involves tracking sales leads, working with data to guide decisions, and crafting proposals that show how our technology can solve real business challenges. I also participate in client meetings, where I help align IBM's solutions with their needs. </p>
+                <ul class="company-abilities">
+                    <li>Cloud</li>
+                    <li>Data</li>
+                    <li>Security</li>
+                    <li>AI</li>
+                    <li>Tech Solutions</li>
+                    <li>Meetings</li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="education" id="education" aria-label="education">
+        <div class="education-conteiner">
+            <h2 class="subtitulo">Education</h2>
+            <div>
+                <p class="education-text">Since I was young, I have had a strong interest in <strong>technology</strong> and always strive to stay updated with the latest trends and advancements in the field.</p>
+
+                <ul class="college-list">
+                    <li class="college">
+                        <span class="college-type">
+                            Bachelor's Degree
+                        </span>
+                        <h3 class="college-course">Software Engineering</h3>
+                        <span class="college-institution">
+                            UniCesumar
+                        </span>
+                    </li>
+
+                    <li class="college">
+                        <span class="college-type">
+                            In progress
+                        </span>
+                        <h3 class="college-course">Front-End & UX/UI Design</h3>
+                        <span class="college-institution">
+                            Origamid
+                        </span>
+                    </li>
+
+                    <li class="college">
+                        <span class="college-type">
+                            Completed
+                        </span>
+                        <h3 class="college-course">CS50: Introduction to Computer Science</h3>
+                        <span class="college-institution">
+                            Harvard
+                        </span>
+                    </li>
+                </ul>
+
+                <div class="extra-education">
+                    <div class="courses">
+                        <h3>More Certifications</h3>
+                        <ul>
+                            <li>International Astronomic Search Collaboration <span>2024</span></li>
+                            <li>Linux Basics<span>2024</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="languages">
+                        <h3>Languages</h3>
+                        <ul>
+                            <li>Portuguese <span>/ Fluent</span></li>
+                            <li>English <span>/ Advanced</span></li>
+                            <li>Japanese <span>/ Intermediate</span></li>
+                            <li>Russian <span>/ Beginner</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="contact">
+        <div class="footer-conteiner">
+            <p class="footer-text">I am currently available for new projects. Feel free to contact me, let's schedule a conversation.</p>
+            <ul class="footer-contact">
+                <li>namienanda@gmail.com</li>
+                <li>+55 11 97072-3377</li>
+            </ul>
+            <p class="footer-copy">Namie. Some rights reserved.</p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

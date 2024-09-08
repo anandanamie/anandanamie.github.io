@@ -1,0 +1,66 @@
+.introducao {
+  max-width: 1200px; /* Tamanho total que definimos lá no css da header */
+  padding: 40px 20px; /* Para separar o topo e a parte de baixo desse elemento */
+  margin: 0 auto; /* Centralizar, 0 para cima e para baixo e auto aos lados (responsividade sempre) */
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* 4 colunas para a foto e 8 colunas para o conteúdo, assim como a grade que fizemos no Figma */
+  gap: 100px;
+  align-items: center;
+}
+
+.introducao h1 {
+  font-size: 4.5rem;
+  line-height: 1.125; /* Multiplicação do font-size direto */
+  margin-bottom: 30px;
+  position: relative; /* A decoração abaixo */
+}
+
+.introducao h1::before {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url("../img/deco.svg") no-repeat center;
+  position: absolute; /* Ao h1 acima */
+  top: -15px; /* Posicionamento diante do h1 */
+  left: -40px; /* Posicionamento diante do h1 */
+  z-index: -1; /* Jogar o elemento pra trás */
+}
+
+.introducao p {
+  font-size: 1.5rem;
+  color: #525252;
+}
+
+@media (max-width: 1000px) {
+  .introducao h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .introducao {
+    grid-template-columns: 1fr 1fr; /* Faremos as colunas ficarem ocupando metade-metade, pois a imagem estava diminuindo muito em comparação com o texto*/
+    gap: 40px; /* O gap começa a ficar muito grande, aqui iremos diminui-lo */
+  }
+
+  .introducao h1 {
+    font-size: 2rem; /* Diminuindo mais ainda a fonte */
+  }
+
+  .introducao h1::before {
+    width: 30px; /* Ajustando o detalhe */
+    height: 10px;
+    left: 0px;
+  }
+}
+
+@media (max-width: 400px) {
+  .introducao {
+    grid-template-columns: 1fr; /* Agora será apenas uma coluna */
+  }
+
+  .introducao img {
+    display: none; /* A imagem some abaixo de 400px */
+  }
+}

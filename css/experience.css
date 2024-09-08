@@ -1,0 +1,118 @@
+.experience {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto; /* Mesmo esqueminha dos outros csss linkados para que tenhamos o mesmo padrão! */
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  margin-bottom: 60px;
+}
+
+.experience .subtitulo {
+  color: #e0e0e0;
+}
+
+.experience-text {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  max-width: 40ch; /* Tamanho máximo do texto horizontalmente */
+  margin-bottom: 60px;
+  color: #525252;
+}
+
+.experience-text strong {
+  color: #141414;
+}
+
+.company {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Para separar o nome da empresa/textinho e cargo/habilidades */
+  gap: 10px 20px;
+  padding: 20px;
+  background: #f5f5f5;
+  margin-bottom: 20px; /* Separar os blocos de experiência */
+  border-radius: 4px;
+  position: relative; /* Em relação ao ano da empresa */
+}
+
+.company::before {
+  content: ""; /* Sempre colocar content no ::before */
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(#f9bfe8, #ff71c6);
+  position: absolute; /* Pra não quebrar o layout e sair do fluxo na tela */
+  top: 20px; /* Padding do topo do nome da empresa */
+  left: -4px;
+}
+
+.company-year {
+  position: absolute; /* Em relação a empresa */
+  top: 22px;
+  left: -100px;
+  color: #525252;
+  font-size: 0.875rem;
+  text-align: right;
+  width: 80px; /* Macete pra deixar os anos de tamanhos iguais e alinhar a direita com o comando acima, se quiser ver como funciona é só colocar uma cor de background */
+}
+
+.company-title {
+  font-size: 1.125rem;
+  line-height: 1.1;
+  font-weight: bold;
+}
+
+.company-text {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #525252;
+}
+
+.company-abilities {
+  display: flex; /* Para que fiquem um ao lado do outro */
+  flex-wrap: wrap; /* Para que quebrem com responsividade */
+  gap: 10px; /* Separa os itens em 10px */
+  align-content: start; /* Alinhar todos ao início */
+}
+
+.company-abilities li {
+  /* Criar os botõezinhos */
+  font-size: 0.875rem;
+  line-height: 1.4;
+  border-radius: 4px;
+  background: #ffffff;
+  padding: 5px 10px;
+}
+
+@media (max-width: 800px) {
+  .experience {
+    grid-template-columns: 1fr; /* Apenas uma luinha em 800px */
+    gap: 40px; /* Gap padrão muito grande, vamos ajustá-lo também */
+    margin-bottom: 0px;
+  }
+
+  .experience .subtitulo {
+    color: #141414;
+  }
+
+  .experience-text {
+    font-size: 1.25rem;
+  }
+
+  .company-year {
+    position: initial; /* Volta ao posicionamento inicial, dentro da caixa e não mais fora no fluxo */
+    order: 1; /* Nesse comando, ele fica abaixo de todos os elementos de texto na div. Se colocássemos 0, estaria em primeiro, como antes. */
+    width: initial;
+    text-align: left;
+  }
+
+  .company-year::before {
+    content: "Year: "; /* Adiciona informação na media query: Escreve conteúdo antes da alteração do company-year */
+  }
+}
+
+@media (max-width: 400px) {
+  .company {
+    grid-template-columns: 1fr;
+  }
+}

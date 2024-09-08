@@ -1,0 +1,153 @@
+.education {
+  background: #141414;
+  color: #ffffff;
+}
+
+.education-conteiner {
+  max-width: 1200px;
+  padding: 120px 20px;
+  margin: 0 auto; /* Mesmo esqueminha dos outros csss linkados para que tenhamos o mesmo padrão! */
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  position: relative;
+}
+
+.education-conteiner::after {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url("../img/deco.svg") no-repeat center;
+  position: absolute;
+  bottom: -50px;
+  left: 20px;
+}
+
+.education .subtitulo {
+  color: #000000;
+  /* max-width: 5ch; */
+}
+
+.education-text {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  max-width: 40ch; /* Tamanho máximo do texto horizontalmente */
+  margin-bottom: 60px;
+  color: #a3a3a3;
+}
+
+.education-text strong {
+  color: #ffffff;
+}
+
+.college-list {
+  display: flex; /* Um ao lado do outro */
+  flex-wrap: wrap; /* Quebrar o conteúdo caso não caiba na tela */
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.college {
+  flex: 1; /* Deixar um ao lado do outro basicamente do mesmo tamanho */
+  background: #000000;
+  padding: 20px; /* Desgrudar das pontas */
+  border-radius: 4px;
+  display: flex; /* Colocamos isso para ativar o margin bottom do spam do college-type, macetinho */
+  flex-direction: column; /* Isso também */
+}
+
+.college-type {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #a3a3a3;
+  margin-bottom: 10px;
+}
+
+.college-course {
+  flex: 1; /* Isso faz com que o elemento cresça o máximo que conseguir, no caso cresce até o flex 1 do .college */
+  font-size: 1.125rem;
+  line-height: 1.4;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.college-course::before {
+  content: ""; /* Sempre colocar content no ::before */
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(#f9bfe8, #ff71c6);
+  position: absolute; /* Pra não quebrar o layout e sair do fluxo na tela */
+  left: -24px;
+}
+
+.college-institution {
+  font-size: 1.125rem;
+  color: #a3a3a3;
+}
+
+.courses {
+  margin-bottom: 60px;
+}
+
+.extra-education h3 {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #8f8f8f;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.extra-education h3::before {
+  display: block; /* Por padrão */
+  content: ""; /* Por padrão */
+  width: 24px; /* Tamanho do ícone */
+  height: 24px;
+  position: absolute;
+  left: -36px;
+  top: -4px;
+}
+
+.courses h3::before {
+  background: url("../img/courses.svg") no-repeat center center;
+}
+
+.languages h3::before {
+  background: url("../img/languages.svg") no-repeat center center;
+}
+
+.extra-education li {
+  font-size: 1.125rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.extra-education span {
+  color: #8f8f8f;
+}
+
+.courses li {
+  display: flex; /* Um ao lado do outro */
+  justify-content: space-between; /* Pra ficar um de um lado e outro do outro! */
+}
+
+@media (max-width: 800px) {
+  .education-conteiner {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+    gap: 40px;
+  }
+  .education .subtitulo {
+    color: #ffffff;
+  }
+  .education-text {
+    font-size: 1.25rem;
+  }
+
+  .extra-education h3::before {
+    position: initial;
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,46 @@
+body {
+  font-family: "Fira Sans", Arial, sans-serif;
+  margin: 0px;
+  color: #141414;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto; /* Mantém a razão da imagem */
+  display: block;
+}
+
+/* Aqui tiramos as margens e paddings de tudo, pois já vem estabelecido e nós não queremos. Queremos personalizar depois. Tamém colocamos font-family para o site todo, cor da fonte e max-width e display block nas imagens para elas não crescerem infinitamente */
+
+.subtitulo {
+  /* Colocaremos a estilização do subtítulo da experiência e da formação aqui no global, pois elas utilizarão o mesmo estilo, poderemos reaproveitar */
+  font-size: 8rem; /* Uma fonte bem grande! */
+  line-height: 1;
+  text-transform: uppercase; /* Tudo maiúsculo */
+  word-break: break-all; /* Quebrar a palavra todinha uhu */
+  max-width: 4ch; /* Quando o texto estiver bem espaçado, irá quebrar em 4 caracteres. (dependendo da letra, geralmente M não cabe). ex: EXPE
+  RIEN
+  CE*/
+  /* Como iremos utilizar cores diferentes, não iremos definir cor aqui e sim no CSS da experiência em si e depois no CSS da formação em si */
+}
+
+@media (max-width: 800px) {
+  .subtitulo {
+    font-size: 3rem;
+    text-transform: capitalize;
+    max-width: initial; /* !important (5ch) comentado no formacao.css*/
+  }
+}
